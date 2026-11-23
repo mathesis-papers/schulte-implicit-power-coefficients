@@ -5,13 +5,15 @@
 Extending Vladimir Kruchinin's coefficient-transfer formula (2011, Theorem 8.1), we give a Lagrange-inversion proof of Werner Schulte's power-coefficient conjecture (OEIS A262082, revision 23, FORMULA, line 44, beginning 'B(m,n,k) = m/(n*k+m)', posed 10 September 2015) for all positive integers n,m and every k>=0. The alternating-sum conversion is the quadrinomial identity proved by Roberto Blanco Gómez (12 October 2026, Section 2). The coefficient formula extends to all integer parameters, with an explicit value when nk+m=0. An ordered-forest bijection proves Schulte's two nonnegative-path conjectures. The same argument gives the trinomial analogues, logarithms and substitutions, and Hanna's binomial-square exponential identities in the cross-referenced entries. The general positive-power transfer precedes the conjecture; the trinomial excursion family also has a later proof by Yan, who identifies the same family in Yang–Zhang–Yang's earlier work.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24484082](https://doi.org/10.5281/zenodo.24484082)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24484081](https://doi.org/10.5281/zenodo.24484081)
 - License: CC-BY-4.0
 - Version: 3
 - Mathesis record: [schulte-implicit-power-coefficients](https://mathesis-omega-research.apps.chrono-ai.fun/papers/schulte-implicit-power-coefficients?version=3)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula. Mathesis, version 3. https://mathesis-omega-research.apps.chrono-ai.fun/papers/schulte-implicit-power-coefficients?version=3
+Haobo Ma, Wenlin Zhang (2026). Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula. Mathesis, version 3. https://doi.org/10.5281/zenodo.24484082
 
 ## Statement progress
 

@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24484081",
     "current_version": 3,
-    "doi": null,
+    "doi": "10.5281/zenodo.24484082",
     "lean_source": {
       "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
       "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"

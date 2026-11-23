@@ -18,19 +18,19 @@
   "generator_version": "0.1.0",
   "sha256": {
     "CHANGELOG.md": "7da3e0661f674270f619f8b448d5719ec9c0660e06af2a4198ab640c0d789b4c",
-    "CITATION.cff": "8bf99dff75932589388885d4a2f5e8509b4e21b9bcfe4728fa86b68b532ed5d2",
+    "CITATION.cff": "53fe86c216adce696991eaed7ef1835d2ce0210b30e6e8d4a671cd89563de034",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
-    "README.md": "6446ee8f843cc7bb418522012587d30b10a3a0bdf60f6ed3eca69bca28094fbf",
+    "README.md": "e19b860ad66a58def646de94d786eba92515d9787669e46b14ca814f8a31f693",
     "formalization/nodes.json": "eaad340b5c2fc934ed058be457373497d3c85c8cd91fc7635d3acb3ffffd5604",
     "manuscript/schulte-implicit-power-coefficients-v3/README.md": "0e76ebaa38fb4935cb0aacbeebfa9e8de6b680921c5c2cceeb9de23b0c2e6b0f",
     "manuscript/schulte-implicit-power-coefficients-v3/metadata.json": "543924bbbbe75c9ce8478c2b9a9eadc28ecfe8b5f18fcc8914c7dca7d31a05f6",
     "manuscript/schulte-implicit-power-coefficients-v3/note.tex": "3ca7772b176499c0f3889e8ea754b66ae3a4cbb5eb9968ff3f6add382587d641",
     "manuscript/schulte-implicit-power-coefficients-v3/verification.json": "9897c2bf8047f965b03e1558c1d2d4038a00312f4df3d2b32bdf833424d609d1",
     "manuscript/schulte-implicit-power-coefficients-v3/verify.py": "f4f0311f6ebce45de48adf837d914b5a034f42a59cd24f949f75ee7d40c8526f",
-    "paper.json": "39ff0c914590e0019efa7497357c5d400935fc2afa77257a4efbb0bad4f7ae97",
+    "paper.json": "7f0f19158257527f28f5ba9f0ea926705b0b647d71aed7793264f33473f8fe6a",
     "paper.pdf": "7999ae965122c4ec50ea780413c1b8571760eec0062dca4f69774c9d8d81a686",
     "source.archive": "fe756bf1771b360e3447e6a647dd95af043c6d5fbb1bf018720d6d240d1efcc7"
   },
-  "snapshot_identity": "8147ecf062beb963a792500e092f9d221c90adbe6aea3dc39af544858a372506"
+  "snapshot_identity": "7237d8326fa9ceec54cf5e00dd188cafc85d7a7c987c4a085fa0208a790ac912"
 }
