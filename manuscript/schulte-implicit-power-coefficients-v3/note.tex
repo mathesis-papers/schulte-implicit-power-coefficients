@@ -1,0 +1,529 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\coef}[2]{[#1^{#2}]}
+\title{Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{16 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Vladimir Kruchinin's coefficient-transfer formula (2011,
+Theorem 8.1), we give a Lagrange-inversion proof of Werner Schulte's
+power-coefficient conjecture (OEIS A262082, revision 23, FORMULA,
+line 44, beginning ``B(m,n,k) = m/(n*k+m)'', posed 10 September 2015)
+for all positive integers $n,m$ and every $k\geq0$.
+The alternating-sum conversion is the quadrinomial identity proved by
+Roberto Blanco G\'omez (12 October 2026, Section 2).
+The coefficient formula extends to all integer parameters, with an explicit
+value when $nk+m=0$. An ordered-forest bijection proves Schulte's two
+nonnegative-path conjectures. The same argument gives the trinomial
+analogues, logarithms and substitutions, and Hanna's binomial-square
+exponential identities in the cross-referenced entries. The general
+positive-power transfer precedes the conjecture; the trinomial excursion
+family also has a later proof by Yan, who identifies the same family
+in Yang--Zhang--Yang's earlier work.
+\end{abstract}
+
+\section{Power coefficients, including the zero denominator}
+Schulte asks for the coefficients of powers of the integer formal series
+$P=1+xP^n+x^2P^{2n}+x^3P^{3n}$ in A262082 \cite{schulte}.
+We prove the proposed formula and extend it to integer $n$ and integer
+powers of $P$. This also gives a precise continuation of A261440's warning
+about negative parameters and division by zero \cite{trinomial}.
+
+The general positive-power transfer was already proved by Vladimir
+Kruchinin in 2011 \cite[Theorem 8.1, pp.~13--14]{kruchinin1} and retained
+in the two-author 2013 revision \cite[Theorem 28, equation (26),
+pp.~23--24]{kruchinin2}. In their composita notation,
+$B_x^\Delta(u,v)=[x^u](xB(x))^v$. Set $(u,v)=(k+m,m)$ and take
+their functional-equation exponent to be $n$. Their auxiliary indices
+become $i_{n-1}=nk+m=N$ and $i_n=N+k$; hence their expression is
+$m[t^{N+k}](tQ_d(t))^N/N=m[t^k]Q_d(t)^N/N$.
+For $n\geq1,m\geq1$ this proves the implicit-series step for every $d$,
+not just three fixed rows. The 2011 text also discusses negative
+functional-equation exponents via reciprocals; the signed powers and
+zero-denominator value below are stated directly with their full domains.
+Scheuer's 23 June 2015 answer already pointed to the general theorem
+\cite{scheuer}; Kruchinin and Perminova give a later composita treatment
+\cite[Theorem 2.3]{perminova}.
+
+Bala's positive binomial sums for $n=1,2,3$ \cite{bala1,bala2,bala3}
+are explicit specializations; the $m=1,n=1$ formula is recorded
+by Deutsch in 2003 \cite{bala1}. Blanco G\'omez proves the alternating
+quadrinomial polynomial identity \cite[Section 2]{blanco}.
+Here the bridge from ordinary polynomial powers to the implicit series is
+Lagrange inversion \cite[Theorem 2.1.1, equation (2.1.1)]{gessel}.
+The integer-parameter form below keeps the boundary $nk+m=0$ rather than
+dividing by it. Ordinary polynomial-coefficient and unrestricted-path
+interpretations are also treated by Fahssi \cite[Sections 1--2]{fahssi};
+the forest interpretation here imposes nonnegativity. The present
+contribution is a common proof of the stated formulas and their signed
+continuations, with explicit treatment of the removable division by zero,
+rather than a priority claim for the positive-power transfer.
+
+For a nonnegative integer $k$, write $\coef{x}{k}F$ for the coefficient
+of $x^k$ in a formal series $F$.
+For an integer $d\geq1$ put $Q_d(t)=1+t+\cdots+t^d$.
+Integer powers, including negative ones, of a series with constant term
+$1$ are defined by multiplication and its formal reciprocal. For $A\in\mathbb Z$
+and $b\geq0$, use the polynomial convention
+\[
+ \binom A0=1,\qquad
+ \binom Ab=\frac{A(A-1)\cdots(A-b+1)}{b!}\quad(b\geq1).
+\]
+In particular, $\binom Ab=0$ when $A\geq0$ and $b>A$.
+The indicator $\mathbf1_{d+1\mid k}$ is $1$ when $d+1$ divides $k$
+and $0$ otherwise.
+
+\begin{theorem}\label{main}
+For every $d\geq1$ and $n\in\mathbb Z$ there is a unique
+$P_{d,n}\in1+x\mathbb Z[[x]]$ such that
+\begin{equation}\label{native}
+ P_{d,n}(x)=Q_d\bigl(xP_{d,n}(x)^n\bigr).
+\end{equation}
+For $m\in\mathbb Z$, the constant coefficient of $P_{d,n}^m$ is $1$.
+For $k\geq1$, writing $N=nk+m$, one has
+\begin{equation}\label{denominatorfree}
+ \coef{x}{k}P_{d,n}^m
+   =\frac{m}{k}\coef{t}{k-1}Q_d'(t)Q_d(t)^{N-1}.
+\end{equation}
+Equivalently,
+\begin{equation}\label{boundary}
+ \coef{x}{k}P_{d,n}^m=
+ \begin{cases}
+ \displaystyle\frac{m}{N}\coef{t}{k}Q_d(t)^N,&N\ne0,\\[6pt]
+ \displaystyle\frac{m}{k}\bigl(1-(d+1)\mathbf1_{d+1\mid k}\bigr),&N=0.
+ \end{cases}
+\end{equation}
+For $d=2,3$ and $N\ne0$ the first line is
+\begin{equation}\label{alternating}
+ \coef{x}{k}P_{d,n}^m
+ =\frac{m}{N}\sum_{j=0}^{k}
+ (-(d-1))^j\binom Nj\binom{dN-2j}{k-j}.
+\end{equation}
+For $n\geq0,m\geq1$, equation \eqref{alternating} also holds at $k=0$;
+the sum may then stop at $\min(k,N)$ and all its remaining upper indices
+are nonnegative.
+\end{theorem}
+
+\begin{proof}
+The coefficient of degree $r$ in
+$1+\sum_{i=1}^d x^iP^{in}$ depends only on the coefficients of $P$
+of degrees less than $r$. This holds for negative exponents too: if
+$P=1+\sum_{r\geq1}p_rx^r$ and $P^{-1}=1+\sum_{r\geq1}q_rx^r$, then
+$q_r=-\sum_{i=1}^r p_iq_{r-i}$. Thus coefficient recursion constructs
+exactly one integer solution of \eqref{native}.
+
+Put $V=xP_{d,n}^n$. Then $V=xQ_d(V)^n$ and $P_{d,n}=Q_d(V)$.
+Over $\mathbb Q[[x]]$, apply Lagrange inversion to
+$R(t)=Q_d(t)^n$ and $\varphi(t)=Q_d(t)^m$. Both are formal series
+for every integer $n,m$, because $Q_d(0)=1$. For $k\geq1$ it gives
+\[
+ \coef{x}{k}\varphi(V)
+ =\frac1k\coef{t}{k-1}\varphi'(t)R(t)^k
+ =\frac{m}{k}\coef{t}{k-1}Q_d'(t)Q_d(t)^{N-1},
+\]
+proving \eqref{denominatorfree}. If $N\ne0$, use
+$(Q_d^N)'=NQ_d'Q_d^{N-1}$ and
+$\coef{t}{k-1}H'=k\coef{t}{k}H$.
+If $N=0$, use $Q_d'/Q_d=(\log Q_d)'$ and
+\[
+ \log Q_d(t)=\log(1-t^{d+1})-\log(1-t),\qquad
+ \coef{t}{k}\log Q_d(t)=\frac{1-(d+1)\mathbf1_{d+1\mid k}}{k}.
+\]
+This proves \eqref{boundary}.
+
+For $d=2,3$ the exact identity
+$Q_d(t)=(1+t)^d-(d-1)t(1+t)^{d-2}$ yields, for every integer $N$,
+\begin{equation}\label{polynomial}
+ Q_d(t)^N=(1+t)^{dN}
+ \sum_{j\geq0}\binom Nj\left(\frac{-(d-1)t}{(1+t)^2}\right)^j.
+\end{equation}
+This is a valid formal binomial expansion: the argument has zero
+constant term. Terms $j>k$ cannot affect degree $k$, proving
+\eqref{alternating}. When $N\geq0$ the series stops at $j=N$.
+At $k=0,n\geq0,m\geq1$, $N=m$ and the coefficient formula equals $1$.
+\end{proof}
+
+For $d=3,n,m\geq1$, \eqref{alternating} is precisely Schulte's
+conjectured $B(m,n,k)$ formula; $m=1$ gives his $A(n,k)$ formula,
+including $n=0$. The same specializations for $d=2$ prove the coefficient
+conjectures in A261440. Its negative-parameter comment is not a conjecture.
+The extension in Theorem~\ref{main} is not asserted there: for example,
+\[
+ P_{3,-1}=1+x-x^4+O(x^5),\qquad \coef{x}{1}P_{3,-1}=1.
+\]
+The latter has $nk+m=0$ and uses the second line of \eqref{boundary}.
+Signed coefficients occur; no path-count interpretation is assigned to
+negative $n$.
+
+\section{Nonnegative paths and trees}
+\begin{corollary}\label{paths}
+Let $d,n,m$ be positive integers. The coefficient $\coef{x}{k}P_{d,n}^m$ counts paths
+of length $nk+m-1$, from height $m-1$ to height $0$, with steps
+$(1,in-1)$ for $0\leq i\leq d$, all of whose heights are nonnegative.
+For $m=1$ these are excursions of length $nk$.
+\end{corollary}
+\begin{proof}
+Consider rooted plane trees with allowed outdegrees $0,n,2n,\ldots,dn$.
+A plane tree has a specified left-to-right order on the children at each
+vertex. Give a vertex of outdegree $in$ weight $x^i$, including weight $1$
+for a leaf. Root decomposition gives \eqref{native}; an ordered forest
+of $m$ such trees has generating function $P_{d,n}^m$.
+
+A forest of weight $x^k$ has total outdegree $nk$. If it has $v$ vertices,
+its number of edges is $v-m=nk$, so $v=nk+m$.
+Traverse the vertices in preorder, starting with $m$ pending vertex
+positions. Visiting an outdegree-$in$ vertex consumes one position and
+inserts its $in$ ordered child positions before the remaining positions.
+The pending count changes by $in-1$; it is positive before the final
+vertex and zero afterwards. The final vertex is a leaf.
+Subtract $1$ from the pending count and omit that final leaf to obtain
+the required path.
+
+Conversely, append a final down-step to the path and add $1$ to its
+heights. The positive pending counts reconstruct the forest by filling
+the next position and inserting its children in order. The appended
+step exhausts all positions. The reconstructed outdegrees sum to
+$v-m=nk$, so its weight is $x^k$. The constructions are inverse.
+When $k=0$ the forest consists of $m$ leaves and the path has $m-1$
+down-steps.
+\end{proof}
+
+For $d=3$ this proves Conjectures 1 and 2 of A262082; for $d=2$ it
+proves the two path conjectures of A261440, whose $m=1,n=1,2$ cases
+are already identified there as proved.
+The tree and ordered-forest mechanism is classical; see
+Sokal \cite[Propositions 3.1--3.2, equations (3.4), (3.6)]{sokal}
+and Gessel \cite[Section 4.5]{gessel}. Yan's 2025 proof covers
+the entire $d=2,m=1$ family \cite[Section 5, Corollary 5.2(D1)]{yan}
+and identifies its path class with the 2024 enumeration of
+Yang--Zhang--Yang \cite{yang}:
+Yan's odd parameter $2n-1$ gives the steps $-1,n-1,2n-1$ and
+length $nk$. The precise correspondence used here is the excursion
+case $m=1$; Corollary~\ref{paths} supplies the arbitrary-$m$ forest statement.
+For $n=m=1,d=3$, replace an outdegree-$i$ vertex, other than the final
+leaf, by $i$ up-steps followed by one down-step. This gives Dyck paths
+with no four consecutive up-steps, as recorded by Callan in A036765.
+The same sequence counts noncrossing partitions with block sizes at
+most $3$: a noncrossing partition has no $a<b<c<e$ with $a,c$ in one
+block and $b,e$ in another, and its block containing $1$, if of size $i$,
+leaves $i$ independent intervals. Hence its generating function satisfies
+$P=1+\sum_{i=1}^3x^iP^i$.
+
+\section{Logarithms, substitutions, and ordinary rows}
+The logarithmic coefficient mechanism is also classical:
+Banderier--Flajolet \cite[Corollary 2]{banderier} express
+excursions through bridges, while Gessel \cite{gessel} gives powers
+and logarithms directly by Lagrange inversion (Section~2.2,
+equations (2.2.4) and (2.2.9)). The specializations below include
+Bala's logarithmic formulas, not new positive-parameter identities.
+\begin{corollary}\label{logarithm}
+For $d\geq1$, $n\ne0$ and $k\geq1$,
+\begin{equation}\label{logformula}
+ \coef{x}{k}\log P_{d,n}=\frac1{nk}\coef{t}{k}Q_d(t)^{nk}.
+\end{equation}
+For $n=0$ this coefficient is
+$\bigl(1-(d+1)\mathbf1_{d+1\mid k}\bigr)/k$.
+For every pair of integers $n,a$,
+\begin{equation}\label{composition}
+ P_{d,n}(x)=P_{d,a}\bigl(xP_{d,n}(x)^{n-a}\bigr),\qquad
+ P_{d,n}\left(\frac{x}{Q_d(x)^n}\right)=Q_d(x).
+\end{equation}
+For $d=2$ and every integer $n$, one also has
+\begin{equation}\label{rational}
+ P_{2,n}=\frac{(1+xP_{2,n}^n)^2}{1+xP_{2,n}^{n-1}}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+With $V$ as in the theorem, Lagrange inversion for $\log Q_d$ gives
+\[
+\coef{x}{k}\log P_{d,n}=k^{-1}\coef{t}{k-1}Q_d'Q_d^{nk-1}.
+\]
+Differentiating $Q_d^{nk}$ proves \eqref{logformula} when $n\ne0$.
+When $n=0$, $P_{d,0}=Q_d$.
+
+Set $Y=xP_{d,n}^{n-a}$. It has linear coefficient $1$, and
+$P_{d,n}=Q_d(YP_{d,n}^a)$. Coefficient recursion in $x$ uniquely
+determines a unit solution of this equation, so it equals $P_{d,a}(Y)$.
+For the second identity put $g(t)=t/Q_d(t)^n$. It has linear coefficient
+$1$ and $g(V(x))=x$, hence also $V(g(x))=x$.
+Consequently $P_{d,n}(g(x))=Q_d(x)$.
+Finally, put $z=xP_{2,n}^n$. Then
+$P_{2,n}(1+xP_{2,n}^{n-1})=P_{2,n}+z=(1+z)^2$.
+The denominator is a unit, proving \eqref{rational}.
+\end{proof}
+
+For $d=2,3$ and $n>0$, the exponential form of \eqref{logformula} is
+\begin{equation}\label{correctedexp}
+ P_{d,n}(x)=\exp\left(\sum_{k\geq1}\frac{x^k}{nk}
+ \sum_{j=0}^k (-(d-1))^j\binom{nk}{j}\binom{dnk-2j}{k-j}\right).
+\end{equation}
+The exponential lines in A262082 and A261440 omit $x^k$.
+Without it the displayed exponent is not a formal series of positive
+order; \eqref{correctedexp} supplies the corrected statement.
+Equation \eqref{composition} also gives Hanna's reversion formulas in
+A186241 and A200731: $xP_{3,n}^n$ is the inverse of $x/Q_3(x)^n$.
+For $n\geq1$, putting $U=xP_{d,n}(x^n)$ gives
+$U=xQ_d(U^n)$, so $U$ is the inverse of $x/Q_d(x^n)$ as well.
+At $d=3,n=2$ this is Bala's 27 July 2023 reversion formula in A186241.
+
+\begin{corollary}\label{rows}
+For $N\geq0$ put $C_{N,k}=\coef{t}{k}Q_3(t)^N$, with
+$C_{N,k}=0$ for $k<0$. Then
+\begin{align}
+ C_{N,k}&=\sum_{b=0}^{\lfloor k/2\rfloor}\binom Nb\binom N{k-2b},\label{positive}\\
+ C_{N,k}&=\sum_{i=0}^{\lfloor k/4\rfloor}(-1)^i\binom Ni
+                 \binom{N+k-4i-1}{k-4i}\quad(N\geq1).\label{inclusion}
+\end{align}
+Their support is $0\leq k\leq3N$, with positive values throughout;
+$C_{N,0}=C_{N,3N}=1$ and $C_{N,k}=C_{N,3N-k}$ on that support.
+They satisfy
+\[
+ C_{N+1,k}=\sum_{i=0}^3 C_{N,k-i},\qquad
+ \sum_k C_{N,k}=4^N,\qquad \sum_k(-1)^k C_{N,k}=0\quad(N>0).
+\]
+For $n\geq0,m\geq1,N=nk+m$, the power coefficient is
+$mC_{N,k}/N$, so \eqref{positive} gives Bala's formulas at $n=1,2,3$.
+\end{corollary}
+\begin{proof}
+Use $Q_3(t)=(1+t)(1+t^2)$ for \eqref{positive} and
+$Q_3(t)=(1-t^4)/(1-t)$ for \eqref{inclusion}.
+Choosing one term from each of $N$ factors also identifies $C_{N,k}$
+with compositions into $N$ parts in $\{0,1,2,3\}$, so precisely that
+support is positive. Replacing each part $i$ by $3-i$ gives symmetry.
+Multiplication by $Q_3$, then evaluation at $1$ and $-1$, gives the
+recurrence and row sums. The last assertion is Theorem~\ref{main}.
+\end{proof}
+These ordinary-row identities are recorded in A008287 \cite{quadrinomial},
+including Shevelev's 2010 formulas, Bala's 2013 inclusion--exclusion sum,
+and the composition, unrestricted-path and four-sided-die interpretations.
+Myerson's 2014 coefficient-extraction argument \cite{myerson} gives
+the same bounded-composition inclusion--exclusion mechanism; the
+summation conventions are discussed further by Belbachir--Mendon\c ca
+\cite[Section 3.3, Remark 3.2 and Proposition 3.3]{belbachir}.
+The alternating identity \eqref{polynomial} at $d=3,N\geq0$ is reproved
+here with credit to Blanco G\'omez's 2026 proof.
+
+\section{Hanna's binomial-square identities}
+The cross-referenced entries contain two further families of exponential
+identities. Define polynomials
+\[
+ S_r(v)=\sum_{j=0}^r\binom rj^2v^j,\qquad
+ R_r(v)=\sum_{j=0}^{r-1}\binom{r-1}j\binom rj v^j\quad(r\geq1).
+\]
+\begin{corollary}\label{hanna}
+For every integer $n$, with $P=P_{3,n}$,
+\begin{equation}\label{hanna1}
+ \log P=\sum_{r\geq1}\frac{(xP^{n-1})^r}{r}S_r(xP^n).
+\end{equation}
+For $P=P_{3,1}$ one also has
+\begin{equation}\label{hanna2}
+ \log\bigl((1-x)P\bigr)
+ =\sum_{r\geq1}\frac1r\left(\frac{x^2P}{(1-x)^2}\right)^rR_r(x).
+\end{equation}
+The infinite-binomial-sum versions follow from
+\begin{equation}\label{eulertransform}
+ \sum_{j\geq0}\binom{a+j}j\binom{b+j}jv^j
+ =\frac{\sum_j\binom aj\binom bjv^j}{(1-v)^{a+b+1}}
+ \qquad(a,b\geq0).
+\end{equation}
+\end{corollary}
+\begin{proof}
+Over $\mathbb Q[[v]][[u]]$, let $T=u(1+T)(1+vT)$ and
+$Y=T/u=(1+T)(1+vT)$. Lagrange inversion gives
+\[
+ \coef{u}{r}\log Y=\frac1r\coef{t}{r}(1+t)^r(1+vt)^r
+ =\frac{S_r(v)}r,
+\]
+and
+\[
+ \coef{u}{r}\log(1+T)
+ =\frac1r\coef{t}{r-1}(1+t)^{r-1}(1+vt)^r
+ =\frac{R_r(v)}r.
+\]
+In the first equality for $\log Y$, apply the derivative form to
+$\log((1+t)(1+vt))$ and then differentiate the $r$th power.
+For \eqref{hanna1}, substitute $u=xP^{n-1}$, $v=xP^n$, and $T=xP^n$;
+then $Y=P$. All substitutions have positive order.
+For \eqref{hanna2}, put $Y=(1-x)P$, $T=Y-1$, $v=x$ and
+$u=x^2P/(1-x)^2$. The native equation gives
+\[
+ T=x^2P^2(1+xP)=u(1+T)(1+xT).
+\]
+Thus the second coefficient identity applies.
+
+For completeness, the left side of \eqref{eulertransform} equals
+$\frac1{b!}(\frac{d}{dv})^b[v^b(1-v)^{-a-1}]$.
+Leibniz's rule, followed by multiplication by $(1-v)^{a+b+1}$, gives
+\[
+ \sum_{i=0}^b\binom bi\binom{a+i}i v^i(1-v)^{b-i}.
+\]
+For $0\leq j\leq b$ its coefficient is
+$\binom bj\sum_{i=0}^j(-1)^{j-i}\binom ji\binom{a+i}a
+=\binom bj\binom aj$; the last equality follows by $j$ successive
+applications of Pascal's identity. This proves \eqref{eulertransform}.
+Take $a=b=r$ for $S_r$ and $a=r-1,b=r$ for $R_r$.
+\end{proof}
+At $n=1,2,3$, \eqref{hanna1} and its transformed version reproduce
+Hanna's formulas in A036765, A186241 and A200731; the first two
+entries date the relevant contributions to February and November 2011.
+The individual undated formulas in A200731 are not assigned an insertion
+date here. Equation \eqref{hanna2} gives the second
+pair in A036765, dated 24 February 2011.
+More generally the same bivariate calculation proves Hanna's $p,q$
+comment in A200731: for integer $p,q$, a unit series $F$ satisfies
+$\log F=\sum_{r\geq1}(xF^p)^rS_r(xF^q)/r$ if and only if
+$F=(1+xF^{p+1})(1+x^2F^{p+q+1})$.
+Indeed $Y$ is the unique unit solution of
+$Y=(1+uY)(1+uvY)$; substitute $u=xF^p,v=xF^q$ in this identity and
+in its logarithm. Uniqueness and injectivity of the formal logarithm
+give both implications.
+
+\section{Source coverage and verification scope}
+The following locators refer to the revisions specified in the references.
+``Proved'' describes an assertion actually made by the source; the
+integer-parameter continuation is an extension, not a refutation of a
+statement made only for positive parameters.
+At A262082 line 44 the power formula is explicitly labelled
+``(conjectured)''; its COMMENTS lines 22--31 name ``Conjecture 1''
+and ``Conjecture 2'' and specify the lengths, steps and nonnegativity
+used in Corollary~\ref{paths}. A261440 line 43 labels its power formula
+``(conjectured)'', and COMMENTS lines 23--33 pose the analogous path
+statements. These labels describe the posing text, not the absence of
+earlier encompassing theorems or later proofs.
+\setlength{\LTpre}{3pt}
+\begin{longtable}{@{}p{0.43\linewidth}p{0.52\linewidth}@{}}
+\toprule Source item & Coverage\\\midrule\endhead
+A262082, FORMULA lines 32, 44: $A(n,k)$; $B(m,n,k)$ & Proved, Theorem~\ref{main}, including $k=0$ and the $n=0$ row. Prior general transfer: Kruchinin, 2011; revised 2013; later treatment Kruchinin--Perminova, 2021.\\
+A262082, COMMENTS: Conjectures 1, 2 & Proved, Corollary~\ref{paths}.\\
+A262082, FORMULA: substitutions and inverse substitution & Proved, Corollary~\ref{logarithm}.\\
+A262082, FORMULA: exponential without $x^k$ & Corrected formal-series statement, equation~\eqref{correctedexp}.\\
+A262082, FORMULA: degrees $0$--$5$ & Proved by coefficient extraction in Theorem~\ref{main}.\\
+A261440, FORMULA and COMMENTS: coefficients, two path conjectures, rational form and substitutions & Proved, $d=2$ in Theorem~\ref{main} and Corollaries~\ref{paths}, \ref{logarithm}. Prior proof cited for the full $m=1$ excursion family: Yan, 2025, relating it to Yang--Zhang--Yang, 2024; $m=1,n=1,2$ were already noted as proved by the source.\\
+A261440: exponential; negative-$n$ comment & Corrected exponential as above. Integer parameters and $nk+m=0$: not posed; extension proved in Theorem~\ref{main}.\\
+A036765, A186241, A200731: power sums and logarithms & Reproved; prior formulas Bala, 2015. The $m=n=1$ coefficient formula is recorded by Deutsch, 2003.\\
+A036765, A186241, A200731: reversion and binomial-square exponential formulas; A200731 $p,q$ comment & Reproved; prior formulas of Arndt and Hanna (dated 2011 where specified), and Bala, 2023; Corollaries~\ref{logarithm}, \ref{hanna}.\\
+A036765: bounded-degree trees, Dyck paths and noncrossing partitions & Proved as consequences of Corollary~\ref{paths}, agreeing with the interpretations recorded there.\\
+A008287, FORMULA: alternating sum & Reproved; prior proof Blanco G\'omez, 2026, Section 2.\\
+A008287: positive sum, inclusion--exclusion, symmetry, recurrence, row sums and elementary counting interpretations & Reproved, Corollary~\ref{rows}; prior formulas Shevelev, 2010, and Bala, 2013. Related bounded-composition proofs: Myerson, 2014; Belbachir--Mendon\c ca, 2026.\\
+Other cross-referenced recurrences, asymptotics, production matrices, transforms and avoidance models & Not covered by these arguments; no new openness claim.\\
+\bottomrule
+\end{longtable}
+
+\noindent\textbf{Formal scope.}
+The pinned file
+\href{https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean}{\texttt{SchulteImplicitQuadrinomialPowers.lean}}
+defines \texttt{Native} by \eqref{native} for $d=3$.
+Its declaration \texttt{result} proves integer-series unique existence
+and \eqref{alternating} for $n,m\geq1$ and every $k\geq0$, with the
+integer coefficient mapped to $\mathbb Q$. Binomial indices in that
+declaration use natural subtraction; terms $j>N$ vanish. Since
+$k\leq3N$ and $j\leq\min(k,N)$, the nonzero terms agree with the
+ordinary-binomial convention here.
+
+The pinned file
+\href{https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S1/Recurrence/SchulteQuadrinomialAlternatingBinomialExpansion.lean}{\texttt{SchulteQuadrinomialAlternatingBinomialExpansion.lean}}
+defines \texttt{T N k} as the degree-$k$ integer polynomial coefficient
+of $Q_3^N$. Its declaration \texttt{result} proves the alternating
+formula for $N\geq0,0\leq k\leq3N$.
+The integer-parameter extension, zero-denominator value, paths,
+trinomial identities, substitutions and binomial-square identities have
+the written proofs above. The accompanying \texttt{verify.py} compares
+coefficient recursion, integer reciprocals, polynomial powers, path
+counts, logarithms and compositions using exact arithmetic;
+\texttt{verification.json} specifies the finite ranges.
+
+\begin{thebibliography}{19}
+\bibitem{kruchinin1} V. Kruchinin, \emph{Compositae and their properties},
+arXiv:1103.2582v1 (14 March 2011), Section 8, Theorem 8.1, pp.~13--14.
+\url{https://arxiv.org/abs/1103.2582v1}.
+\bibitem{kruchinin2} V. V. Kruchinin and D. V. Kruchinin,
+\emph{Composita and its properties}, arXiv:1103.2582v2 (25 March 2013),
+Section 6, Theorem 28, equation (26), pp.~23--24.
+\url{https://arxiv.org/abs/1103.2582v2}.
+\bibitem{scheuer} M. Scheuer, answer to \emph{Asymptotics of coefficients
+of implicitely defined generating function}, MathOverflow,
+23 June 2015, final displayed equation and preceding theorem pointer.
+\url{https://mathoverflow.net/a/209984}.
+\bibitem{perminova} D. V. Kruchinin and M. Y. Perminova,
+\emph{About solving some functional equations related to the Lagrange
+inversion theorem}, Montes Taurus J. Pure Appl. Math. \textbf{3}(1)
+(2021), 62--69, Theorem 2.3, pp.~65--66.
+\url{https://mtjpamjournal.com/papers/article_id_mtjpam-d-20-00011}.
+\bibitem{sokal} A. D. Sokal, \emph{A ridiculously simple and explicit
+implicit function theorem}, arXiv:0902.0069v1 (31 January 2009),
+Propositions 3.1--3.2 and equations (3.4), (3.6), pp.~10--12;
+S\'eminaire Lotharingien de Combinatoire \textbf{61A}, article B61Ad.
+\url{https://arxiv.org/abs/0902.0069v1}.
+\bibitem{banderier} C. Banderier and P. Flajolet,
+\emph{Basic analytic combinatorics of directed lattice paths},
+Theoret. Comput. Sci. \textbf{281} (2002), 37--80, Corollary 2
+and Example 3, equation (24).
+\url{https://doi.org/10.1016/S0304-3975(02)00007-5}.
+\bibitem{yang} L. Yang, Y.-Y. Zhang and S.-L. Yang,
+\emph{Enumeration of the Motzkin paths above a line of rational slope},
+Discrete Math. \textbf{347}(7) (2024), 114013.
+The identification of its path class used here is given in
+\cite[Section 5]{yan}.
+\url{https://doi.org/10.1016/j.disc.2024.114013}.
+\bibitem{yan} J. Yan, \emph{Lattice paths enumerations weighted by
+ascent lengths}, arXiv:2501.01152v1 (2 January 2025), Theorem 3.1,
+pp.~5--6, and Section 5, Corollary 5.2(D1), pp.~12--13;
+Discrete Math. \textbf{349}(2) (2026), 114783.
+\url{https://arxiv.org/abs/2501.01152v1}.
+\bibitem{myerson} G. Myerson, answer on bounded positive parts,
+Math.StackExchange, 6 July 2014, generating-function factorization
+and coefficient extraction.
+\url{https://math.stackexchange.com/a/857682}.
+\bibitem{belbachir} H. Belbachir and J. R. G. Mendon\c ca,
+\emph{Bounded compositions and products of chains, or bi(s)nomials
+everywhere from de Moivre's formula to spin multiplicities and
+constant-sum codes}, arXiv:2610.31865v1 (22 October 2026),
+Section 3.3, equations (13)--(17), Remark 3.2, Proposition 3.3
+and Table 2, pp.~4--6.
+\url{https://arxiv.org/abs/2610.31865v1}.
+\bibitem{schulte} W. Schulte, \emph{OEIS A262082}, 10 September 2015,
+revision 23 (3 June 2018), COMMENTS and FORMULA, especially
+\href{https://github.com/oeis/oeisdata/blob/49db7744e1fdbefbe376d1d018370c017d4c288b/seq/A262/A262082.seq#L44}{the power-coefficient formula, line 44}.
+\url{https://oeis.org/A262082}.
+\bibitem{trinomial} W. Schulte, \emph{OEIS A261440}, 18 August 2015,
+revision 32 (3 June 2018), COMMENTS and FORMULA.
+\url{https://oeis.org/A261440}.
+\bibitem{bala1} \emph{OEIS A036765}, revision 195 (30 October 2026),
+COMMENTS and FORMULA: Deutsch (29 November 2003), Hanna (13 and
+24 February 2011), Arndt (10 June 2011), Bala (21 June 2015).
+\url{https://oeis.org/A036765}.
+\bibitem{bala2} \emph{OEIS A186241}, revision 58 (11 July 2026),
+FORMULA: Hanna (11 November 2011), Bala (21 June 2015; 27 July 2023).
+\url{https://oeis.org/A186241}.
+\bibitem{bala3} \emph{OEIS A200731}, revision 19 (2 November 2019),
+COMMENTS and FORMULA: Hanna (entry dated 21 November 2011),
+Bala (21 June 2015).
+\url{https://oeis.org/A200731}.
+\bibitem{gessel} I. M. Gessel, \emph{Lagrange inversion},
+J. Combin. Theory Ser. A \textbf{144} (2016), 212--249;
+arXiv:1609.05988v1 (20 September 2016), Theorem 2.1.1.
+\url{https://arxiv.org/abs/1609.05988v1}.
+\bibitem{quadrinomial} \emph{OEIS A008287}, revision 172
+(30 October 2026), COMMENTS and FORMULA.
+\url{https://oeis.org/A008287}.
+\bibitem{blanco} R. Blanco G\'omez,
+\emph{A binomial-theorem proof of Schulte's identity for quadrinomial
+coefficients (OEIS A008287)}, version 1.0, 12 October 2026, Section 2.
+\url{https://doi.org/10.5281/zenodo.23315738}.
+\bibitem{fahssi} N.-E. Fahssi, \emph{Polynomial Triangles Revisited},
+arXiv:1202.0228v7 (25 July 2012), Sections 1--2.
+\url{https://arxiv.org/abs/1202.0228v7}.
+\end{thebibliography}
+\noindent\small Copyright 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\url{https://creativecommons.org/licenses/by/4.0/}.
+\end{document}

@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 100885,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "7999ae965122c4ec50ea780413c1b8571760eec0062dca4f69774c9d8d81a686",
+      "sha256": "7999ae965122c4ec50ea780413c1b8571760eec0062dca4f69774c9d8d81a686"
+    },
+    "source": {
+      "bytes": 19161,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "fe756bf1771b360e3447e6a647dd95af043c6d5fbb1bf018720d6d240d1efcc7",
+      "sha256": "fe756bf1771b360e3447e6a647dd95af043c6d5fbb1bf018720d6d240d1efcc7"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending Vladimir Kruchinin's coefficient-transfer formula (2011, Theorem 8.1), we give a Lagrange-inversion proof of Werner Schulte's power-coefficient conjecture (OEIS A262082, revision 23, FORMULA, line 44, beginning 'B(m,n,k) = m/(n*k+m)', posed 10 September 2015) for all positive integers n,m and every k>=0. The alternating-sum conversion is the quadrinomial identity proved by Roberto Blanco Gómez (12 October 2026, Section 2). The coefficient formula extends to all integer parameters, with an explicit value when nk+m=0. An ordered-forest bijection proves Schulte's two nonnegative-path conjectures. The same argument gives the trinomial analogues, logarithms and substitutions, and Hanna's binomial-square exponential identities in the cross-referenced entries. The general positive-power transfer precedes the conjecture; the trinomial excursion family also has a later proof by Yan, who identifies the same family in Yang–Zhang–Yang's earlier work.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 100885,
+      "sha256": "7999ae965122c4ec50ea780413c1b8571760eec0062dca4f69774c9d8d81a686",
+      "url": "/api/v1/collected-papers/schulte-implicit-power-coefficients/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T21:59:42.596811603Z",
+    "record": "schulte-implicit-power-coefficients",
+    "repository_name": "schulte-implicit-power-coefficients",
+    "source": {
+      "bytes": 19161,
+      "sha256": "fe756bf1771b360e3447e6a647dd95af043c6d5fbb1bf018720d6d240d1efcc7",
+      "url": "/api/v1/collected-papers/schulte-implicit-power-coefficients/files/source?version=3"
+    },
+    "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T21:59:42.596811603Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "schulte-implicit-power-coefficients"
+  }
+}

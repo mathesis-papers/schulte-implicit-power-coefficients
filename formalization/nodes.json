@@ -1,0 +1,199 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:schulte-implicit-power-coefficients:3:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
+      },
+      "lineage": "collected:schulte-implicit-power-coefficients:s1",
+      "macros": {
+        "\\coef": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "schulte-implicit-power-coefficients",
+      "scope": "in_scope",
+      "statement": "For every $d\\geq1$ and $n\\in\\mathbb Z$ there is a unique\n$P_{d,n}\\in1+x\\mathbb Z[[x]]$ such that\n\\begin{equation}\n P_{d,n}(x)=Q_d\\bigl(xP_{d,n}(x)^n\\bigr).\n\\end{equation}\nFor $m\\in\\mathbb Z$, the constant coefficient of $P_{d,n}^m$ is $1$.\nFor $k\\geq1$, writing $N=nk+m$, one has\n\\begin{equation}\n \\coef{x}{k}P_{d,n}^m\n   =\\frac{m}{k}\\coef{t}{k-1}Q_d'(t)Q_d(t)^{N-1}.\n\\end{equation}\nEquivalently,\n\\begin{equation}\n \\coef{x}{k}P_{d,n}^m=\n \\begin{cases}\n \\displaystyle\\frac{m}{N}\\coef{t}{k}Q_d(t)^N,&N\\ne0,\\\\[6pt]\n \\displaystyle\\frac{m}{k}\\bigl(1-(d+1)\\mathbf1_{d+1\\mid k}\\bigr),&N=0.\n \\end{cases}\n\\end{equation}\nFor $d=2,3$ and $N\\ne0$ the first line is\n\\begin{equation}\n \\coef{x}{k}P_{d,n}^m\n =\\frac{m}{N}\\sum_{j=0}^{k}\n (-(d-1))^j\\binom Nj\\binom{dN-2j}{k-j}.\n\\end{equation}\nFor $n\\geq0,m\\geq1$, equation \\eqref{alternating} also holds at $k=0$;\nthe sum may then stop at $\\min(k,N)$ and all its remaining upper indices\nare nonnegative.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
+      "toolchain": null,
+      "version": 3,
+      "work": "schulte-implicit-power-coefficients"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:schulte-implicit-power-coefficients:3:s2",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
+      },
+      "lineage": "collected:schulte-implicit-power-coefficients:s2",
+      "macros": {
+        "\\coef": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "schulte-implicit-power-coefficients",
+      "scope": "in_scope",
+      "statement": "Let $d,n,m$ be positive integers. The coefficient $\\coef{x}{k}P_{d,n}^m$ counts paths\nof length $nk+m-1$, from height $m-1$ to height $0$, with steps\n$(1,in-1)$ for $0\\leq i\\leq d$, all of whose heights are nonnegative.\nFor $m=1$ these are excursions of length $nk$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
+      "toolchain": null,
+      "version": 3,
+      "work": "schulte-implicit-power-coefficients"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:schulte-implicit-power-coefficients:3:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
+      },
+      "lineage": "collected:schulte-implicit-power-coefficients:s3",
+      "macros": {
+        "\\coef": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "schulte-implicit-power-coefficients",
+      "scope": "in_scope",
+      "statement": "For $d\\geq1$, $n\\ne0$ and $k\\geq1$,\n\\begin{equation}\n \\coef{x}{k}\\log P_{d,n}=\\frac1{nk}\\coef{t}{k}Q_d(t)^{nk}.\n\\end{equation}\nFor $n=0$ this coefficient is\n$\\bigl(1-(d+1)\\mathbf1_{d+1\\mid k}\\bigr)/k$.\nFor every pair of integers $n,a$,\n\\begin{equation}\n P_{d,n}(x)=P_{d,a}\\bigl(xP_{d,n}(x)^{n-a}\\bigr),\\qquad\n P_{d,n}\\left(\\frac{x}{Q_d(x)^n}\\right)=Q_d(x).\n\\end{equation}\nFor $d=2$ and every integer $n$, one also has\n\\begin{equation}\n P_{2,n}=\\frac{(1+xP_{2,n}^n)^2}{1+xP_{2,n}^{n-1}}.\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
+      "toolchain": null,
+      "version": 3,
+      "work": "schulte-implicit-power-coefficients"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:schulte-implicit-power-coefficients:3:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
+      },
+      "lineage": "collected:schulte-implicit-power-coefficients:s4",
+      "macros": {
+        "\\coef": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "schulte-implicit-power-coefficients",
+      "scope": "in_scope",
+      "statement": "For $N\\geq0$ put $C_{N,k}=\\coef{t}{k}Q_3(t)^N$, with\n$C_{N,k}=0$ for $k<0$. Then\n\\begin{align}\n C_{N,k}&=\\sum_{b=0}^{\\lfloor k/2\\rfloor}\\binom Nb\\binom N{k-2b},\\\\\n C_{N,k}&=\\sum_{i=0}^{\\lfloor k/4\\rfloor}(-1)^i\\binom Ni\n                 \\binom{N+k-4i-1}{k-4i}\\quad(N\\geq1).\n\\end{align}\nTheir support is $0\\leq k\\leq3N$, with positive values throughout;\n$C_{N,0}=C_{N,3N}=1$ and $C_{N,k}=C_{N,3N-k}$ on that support.\nThey satisfy\n\\[\n C_{N+1,k}=\\sum_{i=0}^3 C_{N,k-i},\\qquad\n \\sum_k C_{N,k}=4^N,\\qquad \\sum_k(-1)^k C_{N,k}=0\\quad(N>0).\n\\]\nFor $n\\geq0,m\\geq1,N=nk+m$, the power coefficient is\n$mC_{N,k}/N$, so \\eqref{positive} gives Bala's formulas at $n=1,2,3$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
+      "toolchain": null,
+      "version": 3,
+      "work": "schulte-implicit-power-coefficients"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:schulte-implicit-power-coefficients:3:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
+      },
+      "lineage": "collected:schulte-implicit-power-coefficients:s5",
+      "macros": {
+        "\\coef": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "schulte-implicit-power-coefficients",
+      "scope": "in_scope",
+      "statement": "For every integer $n$, with $P=P_{3,n}$,\n\\begin{equation}\n \\log P=\\sum_{r\\geq1}\\frac{(xP^{n-1})^r}{r}S_r(xP^n).\n\\end{equation}\nFor $P=P_{3,1}$ one also has\n\\begin{equation}\n \\log\\bigl((1-x)P\\bigr)\n =\\sum_{r\\geq1}\\frac1r\\left(\\frac{x^2P}{(1-x)^2}\\right)^rR_r(x).\n\\end{equation}\nThe infinite-binomial-sum versions follow from\n\\begin{equation}\n \\sum_{j\\geq0}\\binom{a+j}j\\binom{b+j}jv^j\n =\\frac{\\sum_j\\binom aj\\binom bjv^j}{(1-v)^{a+b+1}}\n \\qquad(a,b\\geq0).\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
+      "toolchain": null,
+      "version": 3,
+      "work": "schulte-implicit-power-coefficients"
+    }
+  ]
+}

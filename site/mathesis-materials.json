@@ -1,0 +1,11 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "schulte-implicit-power-coefficients",
+  "version": 3,
+  "repository_url": "https://github.com/mathesis-papers/schulte-implicit-power-coefficients",
+  "site_url": "https://papers.trureturing.org/schulte-implicit-power-coefficients/",
+  "doi": null,
+  "reading": {},
+  "slides": [],
+  "visualizations": []
+}

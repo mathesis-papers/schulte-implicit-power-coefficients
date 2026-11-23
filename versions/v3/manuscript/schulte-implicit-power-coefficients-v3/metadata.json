@@ -1,0 +1,18 @@
+{
+  "id": "schulte-implicit-power-coefficients",
+  "revision": 3,
+  "problem_ids": [
+    "oeis-a262082-schulte-power-coefficient",
+    "oeis-a008287-schulte-quadrinomial-alternating-binomial"
+  ],
+  "topic": "Schulte's power-coefficient and nonnegative lattice-path conjectures for implicit trinomial and quadrinomial series",
+  "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Vladimir Kruchinin's coefficient-transfer formula (2011, Theorem 8.1), we give a Lagrange-inversion proof of Werner Schulte's power-coefficient conjecture (OEIS A262082, revision 23, FORMULA, line 44, beginning 'B(m,n,k) = m/(n*k+m)', posed 10 September 2015) for all positive integers n,m and every k>=0. The alternating-sum conversion is the quadrinomial identity proved by Roberto Blanco Gómez (12 October 2026, Section 2). The coefficient formula extends to all integer parameters, with an explicit value when nk+m=0. An ordered-forest bijection proves Schulte's two nonnegative-path conjectures. The same argument gives the trinomial analogues, logarithms and substitutions, and Hanna's binomial-square exponential identities in the cross-referenced entries. The general positive-power transfer precedes the conjecture; the trinomial excursion family also has a later proof by Yan, who identifies the same family in Yang–Zhang–Yang's earlier work.",
+  "summary": "A unified proof of Schulte's coefficient and nonnegative-path conjectures, explicitly crediting Kruchinin's 2011 general transfer and its 2013 revision, Bala's fixed-row formulas, and Yan's later trinomial excursion proof. The integer-parameter formula includes nk+m=0; complete written arguments cover logarithms, substitutions and Hanna's identities. The ordinary quadrinomial identity is reproved with credit to Blanco Gómez's 2026 proof. No priority claim is made.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
+}
