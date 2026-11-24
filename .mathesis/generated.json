@@ -22,7 +22,7 @@
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
     "README.md": "e19b860ad66a58def646de94d786eba92515d9787669e46b14ca814f8a31f693",
-    "formalization/nodes.json": "eaad340b5c2fc934ed058be457373497d3c85c8cd91fc7635d3acb3ffffd5604",
+    "formalization/nodes.json": "b4ccb26c43d3946586d7f51a0a070e6996554d42635d85189f3d0ecd6d93f990",
     "manuscript/schulte-implicit-power-coefficients-v3/README.md": "0e76ebaa38fb4935cb0aacbeebfa9e8de6b680921c5c2cceeb9de23b0c2e6b0f",
     "manuscript/schulte-implicit-power-coefficients-v3/metadata.json": "543924bbbbe75c9ce8478c2b9a9eadc28ecfe8b5f18fcc8914c7dca7d31a05f6",
     "manuscript/schulte-implicit-power-coefficients-v3/note.tex": "3ca7772b176499c0f3889e8ea754b66ae3a4cbb5eb9968ff3f6add382587d641",
@@ -32,5 +32,5 @@
     "paper.pdf": "7999ae965122c4ec50ea780413c1b8571760eec0062dca4f69774c9d8d81a686",
     "source.archive": "fe756bf1771b360e3447e6a647dd95af043c6d5fbb1bf018720d6d240d1efcc7"
   },
-  "snapshot_identity": "7237d8326fa9ceec54cf5e00dd188cafc85d7a7c987c4a085fa0208a790ac912"
+  "snapshot_identity": "4c669aca89e5a93efa216cd6dc4bb36ed5cd24bb3d4654c38fb387549d981815"
 }
