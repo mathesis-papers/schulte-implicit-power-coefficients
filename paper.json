@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24484081",
     "current_version": 3,
     "doi": "10.5281/zenodo.24484082",
+    "kind": "note",
     "lean_source": {
       "revision": "2f8421f6b90d37b4815b887f6c60987553831b20",
       "url": "https://github.com/the-omega-institute/trureturing/blob/2f8421f6b90d37b4815b887f6c60987553831b20/D5/S3/Combinatorics/PowerSeries/SchulteImplicitQuadrinomialPowers.lean"
@@ -55,10 +56,12 @@
     "title": "Proving Werner Schulte's coefficient and lattice-path conjectures by integer-parameter extensions of Kruchinin's formula",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T21:59:42.596811603Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "schulte-implicit-power-coefficients"
